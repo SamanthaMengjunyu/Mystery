@@ -8,10 +8,10 @@
 <p align="center">命盘 · 卜筮 · 记录 · 休闲</p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="docs/assets/badges/version.svg" alt="Version 0.11.1"></a>
+  <a href="https://github.com/SamanthaMengjunyu/Mystery/releases/latest"><img src="docs/assets/badges/version.svg" alt="Version 0.11.1"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.svg" alt="License: AGPL-3.0-only"></a>
-  <a href="#windows"><img src="docs/assets/badges/windows.svg" alt="Windows 10 / 11"></a>
-  <a href="#macos"><img src="docs/assets/badges/macos.svg" alt="macOS arm64 test build"></a>
+  <a href="#下载安装"><img src="docs/assets/badges/windows.svg" alt="Windows 10 / 11"></a>
+  <a href="#下载安装"><img src="docs/assets/badges/macos.svg" alt="macOS arm64"></a>
   <a href="#privacy"><img src="docs/assets/badges/privacy.svg" alt="Data: stored locally"></a>
   <a href="#ai"><img src="docs/assets/badges/ai.svg" alt="AI: bring your own key"></a>
 </p>
@@ -19,7 +19,7 @@
 <p align="center">
   <a href="#为什么做-mystery">为什么做</a> ·
   <a href="#四个部分">功能与截图</a> ·
-  <a href="#安装与运行">安装与运行</a> ·
+  <a href="#下载安装">下载安装</a> ·
   <a href="README.en.md">English</a>
 </p>
 
@@ -75,19 +75,16 @@
 
 <sub>截图使用虚构的人物、生日和问题。顶部封面为 AI 生成的插画。应用界面目前为中文。</sub>
 
-## 安装与运行
+## 下载安装
 
-### Windows
+> 最新版本与全部历史版本都在 [Releases 页面](https://github.com/SamanthaMengjunyu/Mystery/releases/latest)。按你的系统选一个安装包即可：
 
-使用发行文件 `Mystery-0.11.1-setup.exe` 安装。安装包已内置 Python、Node.js 和离线资源，无需另外安装开发环境。
+| 你的系统 | 下载这个文件 | 说明 |
+| --- | --- | --- |
+| 💻 Windows 10/11 x64 | [Mystery-0.11.1-setup.exe](https://github.com/SamanthaMengjunyu/Mystery/releases/download/v0.11.1/Mystery-0.11.1-setup.exe) | 双击安装，内置 Python、Node 和离线资源；需要 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) 和支持 WebGL 2 的显卡驱动 |
+| 🍎 Mac (Apple 芯片) | [Mystery-0.11.1-macos-arm64.pkg](https://github.com/SamanthaMengjunyu/Mystery/releases/download/v0.11.1/Mystery-0.11.1-macos-arm64.pkg) | 双击安装至"应用程序"目录，已内置 Python、Node 和离线数据；Intel Mac 尚未验证 |
 
-需要 Windows 10/11 x64、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) 和支持 WebGL 2 的显卡驱动。操作说明见 [DESKTOP.md](DESKTOP.md)。
-
-### macOS
-
-已构建 **Apple Silicon（arm64）** 安装包 `Mystery-0.11.1-macos-arm64.pkg`，双击后安装至 `/Applications`，无需另装 Python 或 Node。安装包暂保留本地，仓库保持 private，尚未发布下载。
-
-当前为测试版本：应用使用 ad-hoc 签名，PKG 未签名、未公证；已通过打包后离线自检，原生界面、系统权限及干净机器安装仍待验收。Intel 版本尚未构建。构建环境为 macOS 27.0.1，未确定最低支持版本。详见 [macOS 构建说明](docs/MACOS_BUILD.md)。
+其他附件：两个平台的对应源码 zip、许可证压缩包和 `SHA256SUMS.txt` 校验文件，都可在 [Release 附件区](https://github.com/SamanthaMengjunyu/Mystery/releases/latest)按需取用。文件完整性校验方法见 Release 说明。
 
 ### 从源码运行
 
@@ -112,6 +109,8 @@ macOS 终端：
 ```
 
 只调用算法可使用 `python -m pip install .`，详见 [算法 API 与示例](docs/ALGORITHMS.md)。
+
+<sub>安装包未做代码签名（Mac 为 ad-hoc 签名），首次运行如遇系统安全提示，属正常现象。</sub>
 
 <a id="privacy"></a>
 <a id="ai"></a>

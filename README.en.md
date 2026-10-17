@@ -8,15 +8,15 @@
 <p align="center">Charts · Divination · People · Music</p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="docs/assets/badges/version.svg" alt="Version 0.11.1"></a>
+  <a href="https://github.com/SamanthaMengjunyu/Mystery/releases/latest"><img src="docs/assets/badges/version.svg" alt="Version 0.11.1"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.svg" alt="License: AGPL-3.0-only"></a>
-  <a href="#windows"><img src="docs/assets/badges/windows.svg" alt="Windows 10 / 11"></a>
-  <a href="#macos"><img src="docs/assets/badges/macos.svg" alt="macOS arm64 test build"></a>
+  <a href="#download"><img src="docs/assets/badges/windows.svg" alt="Windows 10 / 11"></a>
+  <a href="#download"><img src="docs/assets/badges/macos.svg" alt="macOS arm64"></a>
   <a href="#privacy"><img src="docs/assets/badges/privacy.svg" alt="Data: stored locally"></a>
   <a href="#ai"><img src="docs/assets/badges/ai.svg" alt="AI: bring your own key"></a>
 </p>
 
-<p align="center"><a href="README.md">中文</a> · <a href="#why-i-made-it">Why I made it</a> · <a href="#four-parts">Features</a> · <a href="#run-it">Run it</a></p>
+<p align="center"><a href="README.md">中文</a> · <a href="#why-i-made-it">Why I made it</a> · <a href="#four-parts">Features</a> · <a href="#download">Download</a></p>
 
 **Your records stay on your computer.** Birthdays, notes about friends and saved readings are stored locally, with no cloud sync. Relevant content is sent to your configured LLM provider only when you request an AI interpretation or follow-up. See [privacy details](#privacy).
 
@@ -70,15 +70,18 @@ Choose a local music folder and let the nebula or globe turn in the background. 
 
 <sub>The screenshots use fictional people, birthdays and questions. The cover is an AI-generated illustration.</sub>
 
-## Run it
+<a id="download"></a>
 
-<a id="windows"></a>
+## Download
 
-**Windows:** use `Mystery-0.11.1-setup.exe`. The installer bundles Python, Node.js and offline assets. It requires Windows 10/11 x64, [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) and a WebGL 2 capable graphics driver. See [the desktop guide](DESKTOP.md).
+> The latest version and all past releases live on the [Releases page](https://github.com/SamanthaMengjunyu/Mystery/releases/latest). Pick the installer for your system:
 
-<a id="macos"></a>
+| Your system | Download | Notes |
+| --- | --- | --- |
+| 💻 Windows 10/11 x64 | [Mystery-0.11.1-setup.exe](https://github.com/SamanthaMengjunyu/Mystery/releases/download/v0.11.1/Mystery-0.11.1-setup.exe) | Double-click to install; Python, Node and offline assets bundled. Requires [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) and a WebGL 2 capable graphics driver |
+| 🍎 Mac (Apple silicon) | [Mystery-0.11.1-macos-arm64.pkg](https://github.com/SamanthaMengjunyu/Mystery/releases/download/v0.11.1/Mystery-0.11.1-macos-arm64.pkg) | Double-click to install into /Applications; Python, Node and offline data bundled. Intel Macs not yet verified |
 
-**macOS:** an Apple Silicon (arm64) test installer, `Mystery-0.11.1-macos-arm64.pkg`, has been built locally. Double-click to install into `/Applications`; Python and Node are bundled. The repository remains private and downloads are not published yet. The app is ad-hoc signed; the PKG is unsigned and not notarized. Frozen offline self-tests passed; native UI, permissions and clean-machine installation remain unverified. Intel builds and minimum supported macOS are not verified. Built on macOS 27.0.1. See [macOS build notes](docs/MACOS_BUILD.md).
+Other attachments — the matching source zips for both platforms, license bundles and the `SHA256SUMS.txt` checksum file — are on the [release page](https://github.com/SamanthaMengjunyu/Mystery/releases/latest) if you need them. Verification steps are in the release notes.
 
 ### From source
 
@@ -103,6 +106,8 @@ macOS:
 ```
 
 For the algorithms alone, use `python -m pip install .` and consult [the API guide](docs/ALGORITHMS.md).
+
+<sub>The installers are not code-signed (the Mac build is ad-hoc signed). A security prompt on first launch is expected.</sub>
 
 <a id="privacy"></a>
 <a id="ai"></a>
