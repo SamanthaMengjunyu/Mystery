@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="153" height="28" viewBox="0 0 153 28" role="img" aria-label="Data: Stored locally">
   <title>Data: Stored locally</title>
   <defs><linearGradient id="shine" x2="0" y2="100%"><stop stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#000" stop-opacity=".1"/></linearGradient><clipPath id="round"><rect width="153" height="28" rx="4"/></clipPath></defs>
-  <g clip-path="url(#round)"><path fill="#505050" d="M0 0h48v28H0z"/><path fill="#578d3c" d="M48 0h105v28H31z"/><rect width="153" height="28" fill="url(#shine)"/></g>
+  <g clip-path="url(#round)"><path fill="#505050" d="M0 0h48v28H0z"/><path fill="#578d3c" d="M48 0h105v28H48z"/><rect width="153" height="28" fill="url(#shine)"/></g>
   <g fill="#fff" font-family="Verdana,DejaVu Sans,sans-serif" font-size="12" text-anchor="middle"><text x="24" y="18">Data</text><text x="100.5" y="18">Stored locally</text></g>
 </svg>
