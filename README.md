@@ -144,8 +144,8 @@ AI 是可选的。主动请求解读或追问时，相应的问题、命盘和�
 
 ## 关于我
 
-我是 **SaSa**，做 AI 产品，业余写点自己想用的东西。目前在 [趣丸](https://www.allvoicelab.cn/) 专注泛娱乐行业的相关项目——团队也在做一些有意思的事，欢迎去[我们的官网](https://www.allvoicelab.cn/)逛逛。近期还有新的开源项目在准备中，感兴趣的话可以期待一下 ✨
+我是 **SaSa**，做 AI 产品，业余写点自己想用的东西。目前在 [趣丸千音](https://www.allvoicelab.cn/)专注泛娱乐行业的多模态 AI 项目——团队也在做一些有意思的事，欢迎去[我们的官网](https://www.allvoicelab.cn/)逛逛。近期还有新的开源项目在准备中，感兴趣的话可以期待一下 ✨
 
 Mystery 还会有不周到的地方。如果你用着发现哪里不对，或者想到什么好玩的用法，欢迎提 Issue。涉及生日或聊天内容时，记得换成虚构信息再发。
 
-[GitHub](https://github.com/SamanthaMengjunyu) · [我的互动桌面](https://samanthamengjunyu.github.io/Samantha-creative.github.io/) · [趣丸 AllVoiceLab](https://www.allvoicelab.cn/)
+[GitHub](https://github.com/SamanthaMengjunyu) · [我的互动桌面](https://samanthamengjunyu.github.io/Samantha-creative.github.io/) · [趣丸千音 AllVoiceLab](https://www.allvoicelab.cn/)
