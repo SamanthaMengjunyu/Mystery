@@ -131,8 +131,8 @@ Original project code and documentation are licensed under [AGPL-3.0-only](LICEN
 
 ## About me
 
-I'm **SaSa**. I work on AI products and build things I want to use in my spare time. I currently work on multimodal AI projects for the entertainment industry at [Quwan Qianyin (AllVoiceLab)](https://www.allvoicelab.cn/) — feel free to visit [our team site](https://www.allvoicelab.cn/). An open-source project of my own is also coming soon — stay tuned ✨
+I'm **SaSa**. I work on AI products and build things I want to use in my spare time. I currently work on multimodal AI projects for the entertainment industry at [趣丸千音 (AllVoiceLab)](https://www.allvoicelab.cn/) — feel free to visit [our team site](https://www.allvoicelab.cn/). An open-source project of my own is also coming soon — stay tuned ✨
 
 If something doesn't work, or you have an idea for something fun to add, feel free to open an issue. Please replace personal birthdays or conversations with fictional examples before sharing them.
 
-[GitHub](https://github.com/SamanthaMengjunyu) · [My interactive desk](https://samanthamengjunyu.github.io/Samantha-creative.github.io/) · [Quwan Qianyin AllVoiceLab](https://www.allvoicelab.cn/)
+[GitHub](https://github.com/SamanthaMengjunyu) · [My interactive desk](https://samanthamengjunyu.github.io/Samantha-creative.github.io/) · [趣丸千音 AllVoiceLab](https://www.allvoicelab.cn/)
