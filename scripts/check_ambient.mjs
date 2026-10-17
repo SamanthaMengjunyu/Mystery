@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {audioUrl,nextTrack} from '../desktop/web/music-player.js';
+import {atlasFilters,atlasPins} from '../desktop/web/atlas-filters.js';
+import {createDeviceLocation} from '../desktop/web/device-location.js';
+import {resolvePreferences} from '../desktop/web/preferences.js';
+assert.equal(audioUrl('https://example.com/music.mp3'),'https://example.com/music.mp3');
+for(const value of ['javascript:alert(1)','file:///secret.wav','data:audio/wav,x','https://user:password@example.com/music.mp3'])assert.throws(()=>audioUrl(value));
+assert.equal(nextTrack(2,3,'list'),0);assert.equal(nextTrack(1,3,'single'),1);assert.equal(nextTrack(0,0,'list'),-1);for(let i=0;i<3;i++)for(const value of [0,.3,.99])assert.notEqual(nextTrack(i,3,'shuffle',()=>value),i);
+const people=[{id:'a',latitude:31,longitude:121,current_latitude:40,current_longitude:-74,color:'#8edbcb'},{id:'b',latitude:35,longitude:139}];
+let filters=atlasFilters({mode:'one',location:'current',ids:['a']},people);assert.equal(atlasPins(people,filters).length,1);assert.equal(atlasPins(people,filters)[0].kind,'current');filters=atlasFilters({mode:'many',ids:[]},people);assert.equal(atlasPins(people,filters).length,0);assert.equal(atlasPins(people,atlasFilters({},people)).length,3);assert.equal(atlasFilters({mode:'one',ids:['missing']},people,'b').ids[0],'b');
+assert.equal(resolvePreferences().location_enabled,true);assert.equal(resolvePreferences().location_consent,'unknown');assert.equal(resolvePreferences({location_enabled:false,location_consent:'denied'}).location_enabled,false);
+let prefs={location_enabled:true,location_consent:'unknown'},calls=0,ok,fail,now=1000,seen;
+const device=createDeviceLocation({api:async(action,p)=>{seen={action,...p};return {label:'上海附近',tz_name:'Asia/Shanghai'};},getPrefs:()=>prefs,geolocation:()=>({getCurrentPosition(a,b){calls++;ok=a;fail=b;}}),now:()=>now});
+await device.request();assert.equal(calls,0,'No OS request before consent');prefs.location_consent='granted';let pending=device.request();assert.equal(calls,1);ok({coords:{latitude:31.234567,longitude:121.475678}});await pending;assert.deepEqual(seen,{action:'device-place',latitude:31.23,longitude:121.48});assert.equal(device.snapshot().zone,'Asia/Shanghai');
+const first=await device.entropy(),second=await device.entropy();assert.match(first.commitment,/^[a-f0-9]{64}$/);assert.notEqual(first.commitment,second.commitment);assert(!JSON.stringify(first).includes('latitude'));now+=600001;assert.equal(await device.entropy(),null);
+pending=device.request();const late=ok;device.clear();await pending;late({coords:{latitude:31,longitude:121}});assert.equal(await device.entropy(),null);pending=device.request();fail({code:1});await pending;assert.equal(device.snapshot().state,'denied');assert.equal(await device.entropy(),null);prefs.location_enabled=false;await device.request();assert.equal(calls,3);device.clear();
+console.log('PASS: playlist modes and safe direct URLs, birthplace/residence and person filters, default-enabled location gated by consent, coarse private entropy, expiry, denial and cancellation; no actual device location requested.');

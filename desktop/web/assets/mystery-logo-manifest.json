@@ -1,0 +1,44 @@
+{
+  "source": "20261016-141343.png",
+  "source_sha256": "623ac8474867cae2175e10905636f7450df07c819209a13291a9bfb0e9d18169",
+  "png_sha256": "c3cdaa7e44605efe3ce75241bcc9daf7f07f34066ba5517a669bc0a27582200d",
+  "tool": "built-in image_gen",
+  "operation": "background-extraction",
+  "size": [
+    1254,
+    1254
+  ],
+  "alpha": true,
+  "icon_sizes": [
+    [
+      16,
+      16
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      48,
+      48
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      256,
+      256
+    ]
+  ],
+  "display": "object-fit:contain; equal width and height; no stretch",
+  "prompt_file": "mystery-logo-prompt.txt"
+}

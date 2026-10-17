@@ -1,0 +1,16 @@
+/* The transparent hit area sits over the real WebGL sphere, not a decorative icon. */
+.scene-node{width:132px;height:78px;padding:0;display:flex;justify-content:center;align-items:flex-start;gap:0;transform:translate(-50%,-22px);border-radius:24px}
+.scene-node:before{display:none}
+.planet-hit{position:absolute;left:50%;top:22px;transform:translate(-50%,-50%);display:block;width:var(--hit-size,44px);height:var(--hit-size,44px);border-radius:50%}
+.node-caption{position:absolute;top:var(--caption-top,47px);left:calc(50% + var(--caption-left,0px));transform:translateX(-50%) scale(var(--caption-scale,1));transform-origin:top center;text-align:center;line-height:1.25;transition:opacity .2s,color .2s;text-shadow:0 2px 10px #000,0 0 16px #080b13}
+.scene-node b{font-size:13px;letter-spacing:2px}
+.scene-node small{font-size:8px;letter-spacing:1.7px;margin-top:5px;color:#9ca8bf}
+.scene-node:focus-visible .planet-hit{outline:1px dashed #edf1fa80;outline-offset:4px}
+.scene-node.orbit-hover .node-caption,.scene-node:focus-visible .node-caption{color:var(--planet-color);opacity:1}
+.scene-node.orbit-hover,.scene-node:focus-visible{z-index:2}
+.scene-node:focus-visible{outline:0}
+.central-star-button{position:absolute;width:200px;height:90px;opacity:0;transform:translate(-50%,-22px);padding:0;pointer-events:none}
+.central-star-button .node-caption b{font-family:"STSong","SimSun",serif;font-size:17px;font-weight:400;letter-spacing:5px;color:#eee3ca}
+.central-star-button .node-caption small{display:block;font-size:9px;letter-spacing:1.5px;color:#b5ac9b;margin-top:8px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.central-star-button:focus-visible{outline:0}
+.central-star-button:focus-visible .planet-hit{outline:1px solid #e9d6a985;outline-offset:5px}

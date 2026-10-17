@@ -1,0 +1,3 @@
+# Resolve platform dependencies on the target Mac, then record pip freeze.
+# Do not install requirements-desktop-lock.txt here: it records Windows packages.
+-r requirements-desktop.txt

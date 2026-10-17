@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="mystery-token" content="__MYSTERY_TOKEN__">
+  <title>Mystery · 星云之间</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/interactions.css">
+  <link rel="stylesheet" href="/planets.css">
+  <link rel="stylesheet" href="/birthdays.css">
+  <link rel="stylesheet" href="/atlas.css">
+  <link rel="stylesheet" href="/ambient.css">
+  <link rel="stylesheet" href="/controls.css">
+  <link rel="stylesheet" href="/rituals.css">
+  <link rel="stylesheet" href="/natal-charts.css">
+  <link rel="stylesheet" href="/app-chrome.css">
+  <link rel="stylesheet" href="/palette.css">
+  <link rel="icon" href="/assets/mystery-logo.ico">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+</head>
+<body>
+  <canvas id="universe" aria-label="可旋转、缩放的立体星云"></canvas>
+  <canvas id="transition-surface" aria-hidden="true"></canvas>
+  <div id="scene-labels"><button id="central-birthday-star" class="central-star-button" aria-label="生日簿主星"><span class="planet-hit" aria-hidden="true"></span><span class="node-caption"><b>生日簿</b><small id="central-star-person">从这里，展开每个人的星图</small></span></button></div>
+  <header class="app-header"><div class="brand"><button id="brand-home" aria-label="返回星云"><span class="brand-mark"><img src="/assets/mystery-logo.png" width="46" height="46" alt="Mystery 猫眼巫师帽"></span><span>MYSTERY<small>星 云 之 间</small></span></button></div>
+  <div id="nav-zone"><nav id="nav" aria-label="浮动导航"><button data-nav="home" class="active">星云</button><button data-nav="charts">命盘</button><button data-nav="oracles">问事</button><button data-nav="birthdays">生日簿</button><span class="nav-rule"></span><button data-nav="records">星迹</button><button data-nav="settings" aria-label="设置">设置</button><button id="pin-nav" aria-label="固定导航" title="固定／自动隐藏导航" aria-pressed="false">⌖</button></nav></div>
+  <div class="app-context"><div class="top-status"><span class="status-dot"></span>本地计算<span class="version" id="app-version"></span></div>
+  <button id="birthday-book-button" class="birthday-book-button"><span aria-hidden="true">◷</span><span id="birthday-book-label">生日簿 · 添加生辰</span><small id="birth-count">0</small></button></div></header>
+  <main id="home" class="home">
+    <div class="home-heading"><div class="eyebrow">A SPACE FOR INNER DISCOVERY</div><h1>万象，皆有回响。</h1><p>向下滚动，让星云为你展开。</p></div>
+    <button id="scroll-invitation" class="scroll-invitation" aria-label="向下滚动展开星云，也可点击展开"><span class="scroll-mouse"><i></i></span><span class="scroll-title">向下滚动，展开星云</span><small>或点击此处开始探索</small><span class="scroll-progress"><i id="explore-progress"></i></span><span class="scroll-chevron">⌄</span></button>
+    <div class="home-bottom"><span class="coordinate">✧ <span id="scene-coordinate">NEBULA / 01</span></span><div class="gesture"><span>拖拽 · 旋转视角</span><i></i><span id="wheel-direction">向下滚动 · 展开</span><i></i><button id="reset-camera">重置视角 ↺</button></div><button id="explore" class="text-link">直接展开 <span>↗</span></button></div>
+  </main>
+  <section id="workspace" class="workspace hidden" aria-label="功能空间"></section>
+  <footer class="app-footer"><button id="return-nebula" class="return-nebula hidden" aria-label="返回星云，快捷键 Escape 或 Alt 加 H"><span class="return-orbit">✦</span><span>返回星云</span><kbd>Esc</kbd></button>
+  <div id="music-root"></div></footer><div id="birthday-reminders"></div><div id="focus-root" hidden></div>
+  <div id="modal-root"></div><div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body></html>

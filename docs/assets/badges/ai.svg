@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="191" height="28" viewBox="0 0 191 28" role="img" aria-label="AI: Bring your own key">
+  <title>AI: Bring your own key</title>
+  <defs><linearGradient id="shine" x2="0" y2="100%"><stop stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#000" stop-opacity=".1"/></linearGradient><clipPath id="round"><rect width="191" height="28" rx="4"/></clipPath></defs>
+  <g clip-path="url(#round)"><path fill="#505050" d="M0 0h31v28H0z"/><path fill="#578d3c" d="M31 0h160v28H31z"/><rect width="191" height="28" fill="url(#shine)"/></g>
+  <g fill="#fff" font-family="Verdana,DejaVu Sans,sans-serif" font-size="12" text-anchor="middle"><text x="15.5" y="18">AI</text><text x="111.0" y="18">Bring your own key</text></g>
+</svg>

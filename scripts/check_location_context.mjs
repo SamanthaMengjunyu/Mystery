@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {createLocationContext,coarsePosition} from '../desktop/web/location-context.js';
+
+let calls=0,success,failure,options,now=1000000;
+const geo={getCurrentPosition(ok,fail,opts){calls++;success=ok;failure=fail;options=opts;}};
+const state=createLocationContext({geolocation:()=>geo,now:()=>now});
+assert.equal(calls,0,'Never request location on load');assert.equal(await state.take(),null);
+assert.deepEqual(coarsePosition(31.234567,121.475678),{latitude:31.23,longitude:121.48});
+for(const coords of [[91,0],[0,181],[NaN,0],[Infinity,0],['31',121]])assert.throws(()=>coarsePosition(...coords));
+let pending=state.request();assert.equal(calls,1);assert.equal(state.snapshot().pending,true);
+await assert.rejects(state.take(),/等待/);assert.deepEqual(options,{enableHighAccuracy:false,timeout:8000,maximumAge:0});
+success({coords:{latitude:31.234567,longitude:121.475678}});await pending;
+const system=await state.take();assert.equal(system.source,'device');assert.match(system.commitment,/^[a-f0-9]{64}$/);
+assert.equal(await state.take(),null,'A location may be used only once');
+assert(!JSON.stringify(system).includes('latitude'));assert(!JSON.stringify(system).includes('nonce'));
+state.manual(31.23,121.48);const first=await state.take();state.manual(31.23,121.48);const second=await state.take();
+assert.equal(first.source,'manual');assert.notEqual(first.commitment,second.commitment,'Fresh secret nonces prevent coordinate guessing/linking');
+state.manual(31,121);now+=600001;assert.equal(await state.take(),null,'Expired positions are not used');
+pending=state.request();failure({code:1});await pending;assert.equal(await state.take(),null);assert.match(state.snapshot().message,/未获得定位授权/);
+pending=state.request();const late=success;state.clear();await pending;late({coords:{latitude:31,longitude:121}});assert.equal(await state.take(),null,'Clear ignores late OS responses');
+pending=state.request();failure({code:3});await pending;assert.match(state.snapshot().message,/定位超时/);
+pending=state.request();state.dispose();await pending;assert.equal(await state.take(),null);
+const missing=createLocationContext({geolocation:()=>null});await missing.request();assert.equal(await missing.take(),null);missing.dispose();
+let timeout;const watchdog=createLocationContext({geolocation:()=>geo,setTimer:fn=>{timeout=fn;return 1;},clearTimer:()=>{}});
+pending=watchdog.request();timeout();await pending;assert.equal(watchdog.snapshot().pending,false);assert.match(watchdog.snapshot().message,/超时/);watchdog.dispose();
+console.log('PASS: opt-in only, coarse coordinates, salted one-use commitments, 10-minute expiry, denial/timeout/unavailable fallbacks, cancellation/disposal and late callbacks; no real geolocation requested.');

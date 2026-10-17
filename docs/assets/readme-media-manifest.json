@@ -1,0 +1,60 @@
+{
+  "version": "0.11.1",
+  "prepared_on": "2026-10-16",
+  "assets": {
+    "mystery-atlas-silver.jpg": {
+      "kind": "actual-app-screenshot",
+      "capture": "background browser, current project source",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "26854e3207c406ab8bae92c45efa85987a9e27ecd2d02f904a01331fe3e28238",
+      "data": "fictional demonstration only"
+    },
+    "mystery-home-silver.jpg": {
+      "kind": "actual-app-screenshot",
+      "capture": "background browser, current project source",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "d42b623af581ca650b30269b6d18faab27ac12d3208ea1ccdf6e9c5b81b45b1b",
+      "data": "fictional demonstration only"
+    },
+    "mystery-natal-silver.jpg": {
+      "kind": "actual-app-screenshot",
+      "capture": "background browser, current project source",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "a1544b87b730cab10a0a5c2f57b6337535780f891332540420994fa7c81811e0",
+      "data": "fictional demonstration only"
+    },
+    "mystery-tarot-silver.jpg": {
+      "kind": "actual-app-screenshot",
+      "capture": "background browser, current project source",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "0c15c6da2409f6b20bfb4aade479647347c0be247396b701c8d5a31f4648b550",
+      "data": "fictional demonstration only"
+    },
+    "mystery-cover-art.png": {
+      "kind": "generated-brand-illustration",
+      "workflow": "user-requested portrait-gen/generate.py",
+      "provider": "skyengine",
+      "model": "gpt-image-2.5-sunburst",
+      "size": [
+        1536,
+        864
+      ],
+      "quality": "high",
+      "generation_calls": 1,
+      "prompt_file": "mystery-cover-prompt.txt",
+      "sha256": "5a0c1b0593cac236de473d606335bb077af50a3814a296987fbdec6d2b4938c3"
+    }
+  }
+}

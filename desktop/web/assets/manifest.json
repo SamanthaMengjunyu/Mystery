@@ -1,0 +1,12 @@
+{
+  "provider": "skyengine",
+  "prompt": "nebula-dust-v1-prompt.txt",
+  "size": "1024x1024",
+  "usage": "3D volume density and color detail; no runtime generation calls",
+  "asset": "nebula-dust-v1.png",
+  "workflow": "portrait-gen/generate.py",
+  "sha256": "12a56c4b7bd71d2aba84805859ba99f010210c0ed4861a4c5e61c6f8479028eb",
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "generation_calls": 1
+}

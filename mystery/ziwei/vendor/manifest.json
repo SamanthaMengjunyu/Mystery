@@ -1,0 +1,15 @@
+{
+  "name": "iztro",
+  "version": "2.6.2",
+  "license": "MIT",
+  "source": "https://registry.npmjs.org/iztro/-/iztro-2.6.2.tgz",
+  "npm_integrity": "sha512-7gwdUlFcHbxrQaHMcdnEBiphI1LeA0YM7+z8C+unHxCMNIJDYdfYdLSDW8sA1rqyeB7lYyAOt9h/FwbXII6dVQ==",
+  "bundle_sha256": "1a3c2e19e266feac498982423636131b7ae24226fc1bc7bf5e3a25286a78c5fb",
+  "notice_text_source_versions": {
+    "dayjs": "1.11.23",
+    "i18next": "23.16.8",
+    "lunar-lite": "0.2.8",
+    "lunar-typescript": "1.8.6"
+  },
+  "note": "Bundle is unmodified upstream distribution. Notice source versions describe the license text copies, not an inferred bundle dependency lock."
+}

@@ -1,0 +1,5 @@
+-r requirements.txt
+pywebview==6.2.1
+pyinstaller==6.22.3
+
+tzfpy==2.1.1

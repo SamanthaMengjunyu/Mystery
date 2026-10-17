@@ -1,0 +1,14 @@
+{
+  "sources": [
+    "https://download.geonames.org/export/dump/CN.zip",
+    "https://pypi.org/project/pypinyin/0.55.0/"
+  ],
+  "geonames_archive_sha256": "168214de460b19d83af73f3c83621c623139c0113399ca8f52c493b17df96549",
+  "output_sha256": "efbd463288fe1543bd7725148e288901b65dbe8323a18bfcac3244a85dd8fbeb",
+  "provinces": 31,
+  "indexed_places": 12318,
+  "pypinyin": "0.55.0",
+  "opencc-python-reimplemented": "0.1.7",
+  "runtime_dependency": false,
+  "precision": "Province coordinates are GeoNames ADM1 reference points, not a precise birthplace."
+}

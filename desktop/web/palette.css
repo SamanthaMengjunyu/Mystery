@@ -1,0 +1,185 @@
+/* Quiet translucent silver frames the scene; working surfaces carry the focus.
+   Reading sheets preserve the chart's semantic colors and stronger contrast. */
+:root {
+  --ink: #f1f0f2;
+  --muted: #c7c7c7;
+  --line: #f0f0f036;
+  --accent: #e7e7e7;
+  --gold: #ead0a5;
+  --control-bg: #2b2b2b;
+  --control-edge: #eaeaea40;
+  --control-focus: #e7e7e7;
+  --control-muted: #c4c4c4;
+  --mist-ink: #efedf3;
+  --mist-muted: #bcb9c6;
+  --mist: linear-gradient(115deg, #f4f4f41c, #d8d8e610), #12121b42;
+  --silver-glass: linear-gradient(135deg, #c0c0c04d, #7a7a7a42), #1c1c1cb8;
+  --glass-blur: blur(26px) saturate(.35);
+}
+
+/* Navigation stays translucent so the active workspace remains the focal point. */
+.app-header {
+  background: var(--mist);
+  color: var(--mist-ink);
+  border-color: #ffffff24;
+  box-shadow: 0 10px 32px #08080f18, 0 1px 0 #ffffff24 inset, 0 -1px 0 #0b0b1514 inset;
+  backdrop-filter: blur(32px) saturate(.45);
+}
+.app-header .brand button {color: var(--mist-ink)}
+.app-header .brand small, .app-header .top-status, .app-header .version {color: var(--mist-muted)}
+.app-header .status-dot {background: #c8c4d1; box-shadow: 0 0 0 3px #ffffff08}
+.app-header #nav {background: #ffffff03; border-color: #ffffff10; backdrop-filter: none}
+.app-header #nav-zone.asleep:not(:hover):not(:focus-within) #nav {opacity: .78; transform: none; pointer-events: auto}
+.app-header #nav button {color: #c9c6d1; transition: background .2s, color .2s, box-shadow .2s}
+.app-header #nav button:hover {color: #f5f3fa; background: #ffffff14}
+.app-header #nav button.active {color: #f5f3fa; background: linear-gradient(135deg, #f5f5fa24, #ededf013); box-shadow: 0 1px 0 #ffffff26 inset}
+.app-header #nav button[aria-pressed=true] {color: #ddd9e6; background: #ffffff12}
+.app-header .nav-rule {background: #ffffff20}
+.app-header .birthday-book-button {color: #d1ceda; background: #ffffff05; border-color: #ffffff1f}
+.app-header .birthday-book-button:hover {background: #ffffff14; border-color: #ffffff38}
+.app-header #birth-count {color: #bcb9c6; border-color: #ffffff20}
+.app-header button:focus-visible {outline-color: #d0cadc}
+
+/* Neutral smoked silver keeps long-form reading distinct from floating chrome. */
+.glass, .natal-layout>.result-panel, .oracle-layout .input-panel,
+.atlas-drawer, .atlas-filter-panel, .app-footer .music-panel, .control-options,
+body.natal-immersive .natal-layout>.input-panel,
+body.ritual-immersive .oracle-layout>.input-panel {background: var(--silver-glass); border-color: var(--line); backdrop-filter: var(--glass-blur)}
+.glass {box-shadow: 0 24px 70px #13131330, 0 1px 0 #f4f4f430 inset; backdrop-filter: var(--glass-blur)}
+.modal-backdrop {background: #1414144d; backdrop-filter: blur(8px)}
+.modal {background: linear-gradient(135deg, #5e5e5ebd, #343434d1)}
+.result-header {background: linear-gradient(110deg, #e4e4e40d, #c6c6c604)}
+.result-tabs {background: #393939a8; border-color: #cfcfcf35; backdrop-filter: var(--glass-blur)}
+.result-tabs button {color: #c6c6c6}
+.result-tabs button.active {color: #d3d3d3; border-bottom: 2px solid #bcbcbc}
+.result-tabs button:hover {color: #f1f1f1}
+.result-empty {background: linear-gradient(130deg, #9b9b9b14, #d0d0d007); border-color: #cfcfcf29}
+.empty-symbol {color: #cccccc}
+.page-heading>.toolbar, .page-shell .page-heading>.toolbar,
+.setting-block, .birth-picker {background: #dbdbdb09; border-color: #d0d0d02e}
+.module-option:hover {background: linear-gradient(90deg, #c1c1c115, #cdcdcd08)}
+.module-option .module-symbol {color: #c4c4c4}
+.module-option small, .birthday-info small {color: #b4b4b4}
+.birthday-info p {color: #c6c6c6}
+.birth-monogram {color: #ededed; background: #c1c1c115; border-color: #c1c1c145}
+.birth-current {color: #cacaca; border-color: #c1c1c145}
+
+/* One clear interaction color shared by forms, menus and primary actions. */
+.primary {background: linear-gradient(120deg, #d5d5d5e6, #b5b5b5d9); color: #2f2f2f; border-color: #ececec80; box-shadow: 0 5px 20px #9b9b9b15, 0 1px 0 #f9f9f947 inset}
+.primary:hover {filter: brightness(1.06); box-shadow: 0 5px 24px #c1c1c12b}
+.secondary {background: #e7e7e709; color: #dedede; border-color: #d2d2d23d}
+.secondary:hover {background: #d5d5d51c; border-color: #c9c9c975}
+input, textarea, select, .select-trigger {background: linear-gradient(145deg, #303030ed, #292929ed); color: #e9e9e9; border-color: var(--control-edge); caret-color: #d0d0d0}
+input::placeholder, textarea::placeholder {color: #a6a6a6}
+input:focus, textarea:focus, .select-trigger:focus-visible {border-color: #bdbdbd; box-shadow: 0 0 0 3px #c1c1c112; outline-color: #bdbdbd}
+.select-trigger:hover, .select-trigger[aria-expanded=true] {background: #424242; border-color: #bdbdbd80}
+.select-trigger:after {border-color: #c3c3c3}
+.control-option {color: #d5d5d5}
+.control-option.highlighted {background: #c1c1c117; border-color: #cccccc3d; color: #f5f5f5}
+.control-option[aria-selected=true], .control-check {color: #d0d0d0}
+input[type=checkbox] {background: #2c2c2c; border-color: #c4c4c470}
+input[type=checkbox]:checked {background: #cccccc; border-color: #e6e6e6}
+button:focus-visible, a:focus-visible {outline-color: #cccccc}
+label {color: #cfcfcf}
+summary {color: #cecece}
+.editor-section-title>small {color: #bbbbbb}
+.editor-section-title>h4 {color: #e5e5e5}
+.birth-editor-modal>.toolbar {background: #3b3b3bad; border-color: var(--line); backdrop-filter: var(--glass-blur)}
+.place-auto-zone {background: #c1c1c110; color: #d2d2d2; border-color: #c1c1c133}
+.place-auto-zone:before {color: #cfcfcf}
+.place-precision, .map-help {color: #bcbcbc}
+.place-results {background: #383838fc; border-color: #cbcbcb50}
+.place-results button b {color: #ececec}
+.place-results button small {color: #c0c0c0}
+.place-results button:hover, .place-results button:focus {background: #c1c1c11c}
+.map-place-results {background: #383838; border-color: #cbcbcb50}
+.map-place-results button:hover, .map-place-results button:focus {background: #c1c1c11c}
+.place-map-tabs button {color: #c4c4c4}
+.place-map-tabs button[aria-pressed=true] {background: #c1c1c11c; color: #dadada}
+.birth-editor-modal .place-quick-cities button {border-color: #cecece40; color: #d6d6d6}
+.fact, .data-item, .conversation-message {background: #d3d3d30a; border-color: #d3d3d320}
+.fact small, .data-key {color: #bcbcbc}
+.data-val, .ai-copy {color: #dedede}
+
+/* A lighter frost highlights details while retaining the surface underneath. */
+.natal-selection, .insight {
+  background: linear-gradient(115deg, #e9e9e930, #d8d8d81a);
+  border: 1px solid #e1e1e138;
+  border-left: 3px solid #c0c0c0;
+  border-radius: 0 9px 9px 0;
+  box-shadow: 0 7px 25px #18181814, 0 1px 0 #f6f6f619 inset;
+  backdrop-filter: blur(18px) saturate(1.15);
+  color: #ebebeb;
+}
+.natal-selection>small {color: #d2d2d2}
+.natal-selection h4, .insight h4 {color: #f2f2f2}
+/* Keep detail headings consistent with the shared frosted surface. */
+.natal-selection h4 {color: #f2f2f2!important}
+.natal-selection p, .insight p {color: #dcdcdc}
+.result-body p.insight {color: #dcdcdc; padding: 15px 18px}
+.natal-experience {--natal-muted: #bfbfbf; --natal-gold: #ead0a5; color: #e6e6e6}
+.natal-intro .section-kicker, .natal-reading-label {color: #c4c4c4}
+.natal-intro>p, .natal-reading>p, .natal-insights p {color: #c4c4c4}
+.natal-guide {border-color: #d3d3d338}
+.natal-guide button {color: #dddddd}
+.natal-guide small {color: #bbbbbb}
+.natal-fact {border-color: #cbcbcb47}
+.natal-fact>small {color: #cccccc}
+.natal-fact>b {color: #f0d6ab}
+.natal-fact>p, .natal-caption {color: #bfbfbf!important}
+.natal-facts>.natal-fact:first-child {background: linear-gradient(135deg, #cdcdcd18, #cacaca09); border-radius: 8px; padding: 14px 15px 10px; border: 1px solid #c6c6c64a}
+.natal-pillar {background: linear-gradient(180deg, #d3d3d313, #2e2e2e40); border-color: #d0d0d040}
+.natal-pillar.is-day {background: linear-gradient(180deg, #e6c79724, #d3d3d30e); border-color: #e3c48b9c}
+.natal-palace {background: linear-gradient(140deg, #c1c1c10c, #2e2e2e50); border-color: #cbcbcb45}
+.natal-palace.is-soul {background: linear-gradient(135deg, #e2c28d26, #bdbdbd08)}
+.natal-palace-center {background: radial-gradient(ellipse, #373737f0 20%, #39393990 50%, transparent 72%)}
+.natal-rashi>button {background: #cbcbcb0d; border-color: #cecece4d}
+.natal-rashi>button.is-lagna {background: #dfc38f1c}
+body.natal-immersive .natal-edge>button, .atlas-edge, .ritual-edge button {background: linear-gradient(115deg, #cacaca4d, #c6c6c633); color: #eaeaea; border-color: #ededed4d; backdrop-filter: var(--glass-blur); box-shadow: 0 1px 0 #f6f6f640 inset}
+.natal-close-sidebar, body.natal-immersive .natal-close-sidebar {color: #cfcfcf}
+
+/* Smaller floating controls echo the silver navigation without competing. */
+.app-footer .music-dock, .app-footer .return-nebula, .atlas-toolbar, .atlas-legend {background: var(--mist); border: 1px solid #ffffff24; color: var(--mist-ink); backdrop-filter: blur(30px) saturate(.45); box-shadow: 0 8px 26px #0b0b1218, 0 1px 0 #ffffff20 inset}
+.music-dock button, .music-now b, .music-dock button:hover {color: var(--mist-ink)}
+.music-now small {color: var(--mist-muted)}
+.music-root[data-playing=true] #music-toggle {color: #f0e9fa; text-shadow: 0 0 12px #ffffff20}
+.return-nebula .return-orbit, .return-nebula kbd {color: #c6c1cf; border-color: #ffffff26}
+.app-footer .return-nebula:hover {background: linear-gradient(115deg, #f4f4f427, #d8d8e619), #12121b42; color: #f4f1fa; border-color: #ffffff3d}
+.atlas-toolbar .secondary {background: #ffffff06; color: #d6d2df; border-color: #ffffff1c}
+.atlas-toolbar #atlas-filter-toggle {color: #d6d2df}
+.atlas-toolbar .primary {background: #ffffff1c; color: #eeebf5; border-color: #ffffff32}
+.atlas-legend {color: #d8cbb4}
+.atlas-legend .current {color: #c4bfcd}
+.atlas-legend small {color: #b9b5c2}
+.world-pin {background: #373737ed}
+.world-pin:hover {background: #4c4c4c}
+.birthday-reminders .reminder-panel {background: var(--silver-glass); color: var(--mist-ink); border-color: #ffffff36; box-shadow: 0 18px 65px #18181840, 0 1px 0 #ffffff30 inset; backdrop-filter: blur(28px) saturate(.35)}
+.reminder-panel h3, .reminder-person b {color: var(--mist-ink)}
+.reminder-panel header small, .reminder-panel #reminder-clock, .reminder-person>small, .reminder-person span {color: var(--mist-muted)}
+.reminder-person {border-color: #ffffff20}
+.reminder-person em {background: #d7b57820; color: #ecd4ac}
+.reminder-panel #reminder-close {color: #d8d3e1; background: #ffffff0b}
+.reminder-panel #reminder-close:hover {background: #ffffff20}
+#toast {background: linear-gradient(115deg, #e2e2e233, #cacaca26), #2e2e2ea3; color: #eaeaea; border-color: #e8e8e847; backdrop-filter: var(--glass-blur); box-shadow: 0 10px 35px #18181826, 0 1px 0 #f7f7f72e inset}
+#toast.error {background: #5c354bc9; color: #ffe2e6; border-color: #edc2cb59}
+.music-panel header small {color: #c3c3c3}
+.music-panel .subtle, .music-progress-time {color: #c0c0c0}
+.music-playlist button.is-current {color: #d7d7d7; background: #c1c1c111}
+.ritual-panel {background: radial-gradient(ellipse at 50% 62%, #414141b8, #222222de 75%); border-color: #cecece38}
+body.ritual-immersive .ritual-panel {background: radial-gradient(ellipse at 50% 57%, #4141419c, #262626e6 75%)}
+.ritual-camera-tools button, .ritual-tools button {background: #3c3c3cdb; color: #d6d6d6; border-color: #cccccc40}
+body.ritual-immersive .ritual-close-sidebar {background: #414141; color: #d7d7d7}
+.ritual-picks, .ritual-hover {background: #363636f5; border-color: #cecece4a}
+.ritual-picks button {background: #414141; color: #d4d4d4; border-color: #c1c1c147}
+.ritual-picks button[aria-pressed=true] {background: #cccccc; color: #3c3c3c; border-color: #e4e4e4}
+.focus-scene-switch, .focus-footer {background: var(--mist); border-color: #ffffff24; backdrop-filter: blur(30px) saturate(.45); box-shadow: 0 1px 0 #ffffff20 inset}
+.focus-scene-switch button, .focus-footer button, .focus-footer span {color: var(--mist-ink)}
+.focus-scene-switch button[aria-pressed=true] {background: #ffffff1a; color: #f1edf8}
+.focus-heading>div:first-child small {color: #c8c8c8}
+.focus-time p, .focus-time small {color: #c9c9c9}
+.home-heading .eyebrow {color: #c0c0c0}
+.home-heading p, .home-bottom {color: #c2c2c2}
+::selection {background: #c1c1c14d; color: #f8f8f8}
+* {scrollbar-color: #909090 #272727}
+::-webkit-scrollbar-thumb {background: #909090; border-color: #353535}
+::-webkit-scrollbar-track {background: #2727276b}

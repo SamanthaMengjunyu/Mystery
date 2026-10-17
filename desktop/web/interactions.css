@@ -1,0 +1,26 @@
+/* Home invitation, always-available return, and a low-opacity faceted portal. */
+.scroll-invitation{position:absolute;left:50%;bottom:90px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;padding:17px 28px;pointer-events:auto;opacity:clamp(0,calc(1 - var(--explore-progress,0)*1.35),1);transition:opacity .3s;z-index:5}
+.scroll-invitation.dismissed{opacity:0;visibility:hidden;pointer-events:none}
+.scroll-mouse{position:relative;width:20px;height:31px;border:1px solid #b4c3e17a;border-radius:12px;box-shadow:0 0 24px #9aadd51a}
+.scroll-mouse i{position:absolute;top:6px;left:8px;width:2px;height:6px;border-radius:2px;background:#d6e1f1;animation:scroll-bead 2.2s ease-in-out infinite}
+.scroll-title{font-family:"STSong","SimSun",serif;font-size:15px;letter-spacing:4px;color:#d1d9ec;text-shadow:0 2px 12px #000}
+.scroll-invitation small{font-size:9px;letter-spacing:2px;color:#828da9}
+.scroll-progress{height:1px;width:96px;background:#8e9bbc24;display:block;margin-top:3px;overflow:hidden}
+.scroll-progress i{display:block;height:100%;background:#bdcae9;transform:scaleX(var(--explore-progress,0));transform-origin:left;box-shadow:0 0 8px #b7c6e4}
+.scroll-chevron{font-size:18px;color:#a7b6d9;animation:scroll-arrow 2.2s ease-in-out infinite}
+@keyframes scroll-bead{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@keyframes scroll-arrow{0%,100%{transform:translateY(-3px)}50%{transform:translateY(3px)}}
+/* A short duration combined with infinite repeats causes flashing in reduced motion. */
+body.reduced *,body.reduced *:before,body.reduced *:after{animation-iteration-count:1!important}
+body.reduced .scroll-mouse i,body.reduced .scroll-chevron{animation:none!important;transform:none;opacity:.8}
+#transition-surface{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:45;display:none}
+#transition-surface.active{display:block}
+.workspace{transition:opacity .16s,filter .16s}
+.route-leaving .workspace{opacity:.3;filter:blur(2px)}
+.return-nebula{position:fixed;right:5%;bottom:9px;display:flex;align-items:center;gap:10px;padding:7px 13px;color:#aebbd5;z-index:36;background:#111a29b3;border:1px solid #a8bcde26;backdrop-filter:blur(18px);border-radius:25px;letter-spacing:2px;font-size:10px;transition:background .2s,box-shadow .2s}
+.return-nebula:hover{background:#25324bbf;box-shadow:0 0 26px #9baed51a;color:#e0e6f5}
+.return-orbit{width:23px;height:23px;border:1px solid #a9b8d43d;border-radius:50%;display:grid;place-items:center;font-size:14px;transform:rotate(-18deg)}
+.return-nebula kbd{font-family:Consolas,monospace;letter-spacing:0;font-size:9px;color:#8593ae;border:1px solid #acbcde2a;border-radius:4px;padding:2px 4px;margin-left:3px}
+.home .home-heading{transition:opacity .6s,transform .6s}
+@media(max-height:760px){.scroll-invitation{bottom:70px;gap:8px}.scroll-mouse{height:26px}.scroll-title{font-size:13px}}
+@media(max-width:850px){.scroll-invitation{bottom:88px}.return-nebula{right:3%;bottom:4px;padding:3px 10px}.return-orbit{width:17px;height:17px}.workspace{bottom:42px}}

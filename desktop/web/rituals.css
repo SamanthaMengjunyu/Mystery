@@ -1,0 +1,58 @@
+.oracle-layout{grid-template-columns:300px minmax(0,1fr);gap:22px}
+.oracle-layout .input-panel{transform:none;background:linear-gradient(145deg,#151d2bd9,#0b111edb)}
+.ritual-panel{position:relative;pointer-events:auto;min-width:0;height:100%;min-height:470px;border:1px solid #a9b8d422;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 50% 62%,#1d283ab8,#080d17de 75%);box-shadow:0 24px 80px #0003;isolation:isolate}
+.ritual-tools[hidden],.ritual-picks[hidden]{display:none}
+.ritual-canvas{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none;outline:none;cursor:grab}
+.ritual-canvas:active{cursor:grabbing}.ritual-canvas:focus-visible{outline:1px solid #d2c09a;outline-offset:-4px;border-radius:18px}
+.ritual-heading{position:absolute;left:30px;right:30px;top:25px;pointer-events:none}
+.ritual-heading h2{font-size:25px;letter-spacing:5px;margin:10px 0;color:#e0ddd4;font-weight:400}
+.ritual-heading p{margin:0;max-width:530px;color:#9daac0;font-size:12px;line-height:1.9}
+.ritual-footer{position:absolute;bottom:23px;left:26px;right:26px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.ritual-status{font-size:12px;line-height:1.8;letter-spacing:1px;color:#d6c9ae;flex:1;min-width:160px}
+.ritual-footer .primary{padding:11px 18px;font-size:12px;letter-spacing:1px}
+.ritual-tools{position:absolute;right:22px;top:115px;display:flex;gap:6px}.ritual-tools button{padding:7px 10px;background:#0c1423a6;border:1px solid #a8bbd22b;border-radius:6px;color:#a7b6cf;font-size:11px}
+.ritual-picks{position:absolute;left:25px;right:25px;bottom:90px;display:flex;gap:5px;justify-content:center;flex-wrap:wrap}
+.ritual-picks button{padding:5px 9px;min-width:29px;border:1px solid #a9b9d12b;border-radius:5px;color:#91a3c2;font-size:10px;background:#0d1422c9}
+.ritual-picks button[aria-pressed=true]{color:#eee0bd;border-color:#cbb98699;background:#51462d55}
+.ritual-answer{position:absolute;top:42%;left:22%;right:12%;text-align:center;pointer-events:none;color:#38332c;font-family:Georgia,"Microsoft YaHei",serif;line-height:1.9;opacity:0;transition:opacity .6s}
+.ritual-answer.visible{opacity:1}.ritual-answer strong{font-size:clamp(16px,1.9vw,25px);font-weight:400;display:block}.ritual-answer small{font-size:10px;letter-spacing:3px;color:#756957}
+.ritual-failed{position:absolute;inset:35% 10% auto;text-align:center;color:#d4c29d;font-size:13px;line-height:2}
+@media(max-width:1200px){.oracle-layout{grid-template-columns:270px minmax(0,1fr);gap:16px}.ritual-heading{left:23px;top:20px;right:23px}.ritual-heading h2{font-size:22px}.ritual-footer{left:20px;right:20px}.ritual-status{font-size:11px}.ritual-answer{left:16%;right:9%}}
+@media(max-width:850px){.ritual-panel{height:580px}.ritual-heading h2{font-size:20px}.ritual-answer strong{font-size:19px}}
+
+.ritual-reset{position:absolute;top:17px;right:20px;padding:6px;color:#8391a8;font-size:10px;z-index:2}.ritual-heading{padding-right:55px}
+
+.ritual-answer,.ritual-answer.visible{top:0;left:0;right:auto;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);opacity:1}
+
+.ritual-camera-tools{position:absolute;top:110px;right:22px;display:flex;gap:8px;align-items:center;z-index:2}
+.ritual-camera-tools button{padding:8px 11px;border:1px solid #c0cbe02e;border-radius:7px;background:#101b2cce;color:#aabbd4;font-size:11px}
+.ritual-camera-tools .ritual-tools{position:static;display:inline-flex}
+.ritual-camera-tools .ritual-tools[hidden]{display:none}
+.ritual-view-hint{position:absolute;bottom:76px;left:25px;color:#71829d;font-size:10px;letter-spacing:1px;pointer-events:none}
+.ritual-hover{position:absolute;pointer-events:none;padding:7px 11px;border:1px solid #d3c19c45;border-radius:5px;background:#111c2ee8;color:#e4d5b8;font-size:11px;z-index:3}
+.ritual-hover[hidden],.ritual-edge[hidden]{display:none}
+.ritual-edge{position:absolute;left:0;top:110px;bottom:90px;width:22px;z-index:4;display:flex;align-items:center}
+.ritual-edge button{writing-mode:vertical-rl;letter-spacing:3px;font-size:11px;color:#aab8ce;border:1px solid #b8c5df30;border-left:0;border-radius:0 9px 9px 0;padding:17px 7px;background:#101b2dd9}
+.ritual-close-sidebar{display:none}
+.ritual-picks{left:auto;right:25px;bottom:140px;max-width:420px;max-height:280px;overflow:auto;padding:14px;justify-content:flex-start;border:1px solid #b7c6de33;border-radius:12px;background:#0d1628f5;backdrop-filter:blur(20px);z-index:5}
+.workspace{transition:opacity .16s,filter .16s,inset .6s cubic-bezier(.16,1,.3,1)}
+body.ritual-immersive .workspace{inset:0;perspective:none}
+body.ritual-immersive .oracle-layout{display:block;transform:none;animation:none}
+body.ritual-immersive .ritual-panel{position:absolute;inset:0;border:0;border-radius:0;min-height:0;background:radial-gradient(ellipse at 50% 57%,#18283d9c,#080d17e6 75%);box-shadow:none}
+body.ritual-immersive .oracle-layout>.input-panel{position:absolute;left:20px;top:112px;bottom:95px;width:310px;max-height:none;z-index:6;transform:translateX(-115%);visibility:hidden;opacity:0;transition:transform .35s,opacity .3s,visibility .35s;background:linear-gradient(145deg,#182237f7,#0b1324fc);box-shadow:15px 20px 60px #0008;border:1px solid #a9b9d43b}
+body.ritual-drawer-open .oracle-layout>.input-panel{visibility:visible;opacity:1;transform:translateX(0)}
+body.ritual-immersive .ritual-close-sidebar{display:block;position:sticky;top:0;margin-left:auto;margin-bottom:15px;padding:5px;color:#b7c4d9;font-size:11px;z-index:2;background:#172237}
+body.ritual-immersive .ritual-heading{left:45px;top:112px;right:240px;max-width:760px}
+body.ritual-immersive .ritual-heading h2{font-size:23px;margin:8px 0}
+body.ritual-immersive .ritual-heading p{max-width:750px;font-size:11px}
+body.ritual-immersive .ritual-reset{top:117px;right:36px}
+body.ritual-immersive .ritual-camera-tools{top:154px;right:36px}
+body.ritual-immersive .ritual-footer{left:45px;right:45px;bottom:48px}
+body.ritual-immersive .ritual-view-hint{left:45px;bottom:102px}
+body.ritual-immersive .ritual-picks{right:36px;bottom:130px}
+@media(max-width:1100px){body.ritual-immersive .ritual-heading{left:36px;right:230px;top:105px}body.ritual-immersive .ritual-heading h2{font-size:21px}body.ritual-immersive .ritual-heading p{max-width:600px;font-size:10px}body.ritual-immersive .ritual-footer{left:36px;right:36px}body.ritual-immersive .ritual-view-hint{left:36px;font-size:9px}}
+
+body.ritual-immersive .candle-table .ritual-heading{max-width:280px;right:auto}body.ritual-immersive .candle-table .ritual-heading p{max-width:280px}
+@media(max-width:1100px){body.ritual-immersive .candle-table .ritual-heading,body.ritual-immersive .candle-table .ritual-heading p{max-width:240px}}
+
+.answer-table .ritual-answer{left:44px;top:auto;bottom:150px;transform:none;max-width:245px;text-align:left;padding:0;background:none;border:0;pointer-events:none}.answer-table .ritual-answer strong{font-size:17px;line-height:1.9}.answer-table .ritual-answer small{font-size:9px;letter-spacing:3px}.answer-table .ritual-heading{max-width:360px}

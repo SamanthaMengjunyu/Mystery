@@ -1,0 +1,32 @@
+{
+  "source_project": "20260310-bazi",
+  "extracted_on": "2026-10-15",
+  "source_sha256": {
+    "services/bazi_service.py": "20200823bdc0ebc40d19647c86740b5b39dd29b87ca5f56bc3975c00c8a265fd",
+    "services/analysis.py": "a252be5ad102e68c1c4a60a18bc464b0d87b1174d8d4bf20b5abce2245a0cc01",
+    "services/true_solar_time.py": "4d9741f0c19b213232dba556b3ae5ffd81911a93f4220b4c7c9b6826a16ed02a",
+    "services/astrology.py": "6b01f2d118d939f3f31282b45293b523d9644ad7a8156ff66e96b344916c82c7",
+    "services/tarot_service.py": "f5838a8ab307f56f63c63da179943e5505006e94ebefc7c6bc6c612e1f32849c",
+    "services/tarot_data.py": "d281d1ece189742a6296c4c3f89d8c79af6a311f4d1ff606a3ffb8eb2cbbdab1",
+    "services/liuyao_service.py": "f4c06d30fed1de26070cfab96cf19cf2f2463881063b63980dda40d24492ae29",
+    "services/liuyao_data.py": "1375316b5950cb18ebc029aa457ca53e51ddb5f1e77f078fcc5908165bc16e99",
+    "services/interpret.py": "9b08e9332f24c1f77e062796b3185b00f4d0036bc0aeeb227315fc1bb72dc028",
+    "templates/book/index.html": "df6e36bb1783b08164b018dc6fc8008e7f801b10a8a030984fd7250607fd08b6"
+  },
+  "module_sources": {
+    "services/bazi_service.py": "mystery/bazi/chart.py",
+    "services/analysis.py": "mystery/bazi/analysis.py",
+    "services/true_solar_time.py": "mystery/solar_time/calculator.py",
+    "services/astrology.py": "mystery/astrology/engine.py",
+    "services/tarot_service.py": "mystery/tarot/reading.py",
+    "services/tarot_data.py": "mystery/tarot/data.py",
+    "services/liuyao_service.py": "mystery/liuyao/casting.py",
+    "services/liuyao_data.py": "mystery/liuyao/data.py"
+  },
+  "notes": [
+    "Calculation rules and dictionary schemas preserved; imports reorganized.",
+    "interpret.py split into prompts, client, scheduler and service; Flask config removed.",
+    "Book answer pool preserved; browser random selection ported to Python.",
+    "No configuration credentials, database, frontend or private records included."
+  ]
+}

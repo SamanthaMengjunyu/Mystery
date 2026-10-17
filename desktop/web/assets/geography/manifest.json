@@ -1,0 +1,23 @@
+{
+  "downloaded": "2026-10-16",
+  "land": {
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson",
+    "license": "Natural Earth public domain",
+    "sha256": "967accfa6e5c17cf112d8533f3b73769e42932e21068a220d8ca5fd242b751ff"
+  },
+  "cities": {
+    "source": "https://download.geonames.org/export/dump/cities15000.zip",
+    "license": "GeoNames CC BY 4.0",
+    "count": 34163,
+    "sha256": "f6c05a8dbeac6aa4e8ddb311f4c9a3d92e1eac8776443a204e124880e1d07490",
+    "adaptation": "Retained GeoNames Chinese aliases and added simplified forms via OpenCC 0.1.7"
+  },
+  "countries": {
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+    "license": "Natural Earth public domain",
+    "count": 177,
+    "sha256": "6068c49c7a59160cc307f0e01facd9fb8e1d7a6f26175532a651ac1a6361012e",
+    "upstream_sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+    "adaptation": "Retained country/region names, identifiers and polygon geometry; coordinates rounded to 5 decimal places. Natural Earth default de facto boundaries."
+  }
+}

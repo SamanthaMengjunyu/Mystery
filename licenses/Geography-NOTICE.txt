@@ -1,0 +1,18 @@
+Offline geographic data
+
+Land outlines and country/region polygons: Natural Earth, public domain.
+https://www.naturalearthdata.com/about/terms-of-use/
+https://github.com/nvkelso/natural-earth-vector
+
+City names and coordinates: GeoNames cities15000, CC BY 4.0.
+https://www.geonames.org/
+https://creativecommons.org/licenses/by/4.0/
+The bundled subset retains city names, Chinese aliases, coordinates, country, population and IANA zone; online services are not used.
+
+Timezone lookup: tzfpy (MIT) with timezone-boundary-builder data (ODbL), source/license files included separately. Birthplace selections automatically set the stored IANA zone; historical offsets use bundled IANA tzdata.
+
+Country/region polygons: Natural Earth 1:110m admin 0 countries, public domain. The bundled subset retains names and polygons with 5-decimal coordinates. Source boundaries follow the Natural Earth default de facto representation; this atlas is a small-scale visual aid, not a boundary authority.
+https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson
+
+Province reference points: GeoNames CN ADM1 extract, CC BY 4.0, https://download.geonames.org/export/dump/CN.zip . These are coarse region points.
+Offline search keys were generated with pypinyin 0.55.0 (MIT) and OpenCC Python 0.1.7 (Apache-2.0); licenses are included. These tools are not runtime dependencies.

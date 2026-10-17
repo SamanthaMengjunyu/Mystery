@@ -1,0 +1,7 @@
+Rider-Waite-Smith tarot: 78 original scans, 350 x 600 pixels.
+Artwork: Pamela Colman Smith; design: Arthur Edward Waite.
+Original RWS artwork is public domain.
+Scan source: https://github.com/metabismuth/tarot-json (originally data.totl.net).
+The 78 locally reused JPEGs have been byte-verified against the upstream repository.
+Upstream project MIT license is included as Tarot-RWS-LICENSE.txt.
+These bundled files load offline and are mapped to the existing major/suit card IDs.

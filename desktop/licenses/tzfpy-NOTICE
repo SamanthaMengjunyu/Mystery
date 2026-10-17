@@ -1,0 +1,111 @@
+NOTICE
+
+This product includes software developed by [github.com/ringsaturn/tzfpy].
+------------------------------------------------------------------------
+
+geometry-rs (github.com/ringsaturn/geometry-rs)
+License: MIT
+Copyright (c) 2022 ringsaturn
+
+heck (github.com/withoutboats/heck)
+License: MIT OR Apache-2.0
+Copyright (c) 2015 The Rust Project Developers
+
+itoa (github.com/dtolnay/itoa)
+License: MIT OR Apache-2.0
+Author: dtolnay
+
+lazy_static (github.com/rust-lang-nursery/lazy-static.rs)
+License: MIT OR Apache-2.0
+Copyright (c) 2010 The Rust Project Developers
+
+libc (github.com/rust-lang/libc)
+License: MIT OR Apache-2.0
+Copyright (c) The Rust Project Developers
+
+memchr (github.com/BurntSushi/memchr)
+License: Unlicense OR MIT
+Copyright (c) 2015 Andrew Gallant
+
+once_cell (github.com/matklad/once_cell)
+License: MIT OR Apache-2.0
+Author: matklad
+
+portable-atomic (github.com/taiki-e/portable-atomic)
+License: Apache-2.0 OR MIT
+Author: taiki-e
+
+pqueue (github.com/tidwall/pqueue)
+License: MIT
+Copyright (c) 2022 Josh Baker
+
+proc-macro2 (github.com/dtolnay/proc-macro2)
+License: MIT OR Apache-2.0
+Author: dtolnay
+
+pyo3 (github.com/pyo3/pyo3)
+License: MIT OR Apache-2.0
+Copyright (c) 2023-present PyO3 Project and Contributors. https://github.com/PyO3; Copyright (c) 2017-present PyO3 Project and Contributors. https://github.com/PyO3
+
+pyo3-ffi (github.com/pyo3/pyo3)
+License: MIT OR Apache-2.0
+Copyright (c) 2023-present PyO3 Project and Contributors. https://github.com/PyO3; Copyright (c) 2017-present PyO3 Project and Contributors. https://github.com/PyO3
+
+pyo3-macros (github.com/pyo3/pyo3)
+License: MIT OR Apache-2.0
+Copyright (c) 2023-present PyO3 Project and Contributors. https://github.com/PyO3; Copyright (c) 2017-present PyO3 Project and Contributors. https://github.com/PyO3
+
+pyo3-macros-backend (github.com/pyo3/pyo3)
+License: MIT OR Apache-2.0
+Copyright (c) 2023-present PyO3 Project and Contributors. https://github.com/PyO3; Copyright (c) 2017-present PyO3 Project and Contributors. https://github.com/PyO3
+
+quote (github.com/dtolnay/quote)
+License: MIT OR Apache-2.0
+Author: dtolnay
+
+rtree_rs (github.com/tidwall/rtree.rs)
+License: MIT
+Copyright (c) 2022 Josh Baker
+
+serde (github.com/serde-rs/serde)
+License: MIT OR Apache-2.0
+Author: serde-rs
+
+serde_core (github.com/serde-rs/serde)
+License: MIT OR Apache-2.0
+Author: serde-rs
+
+serde_derive (github.com/serde-rs/serde)
+License: MIT OR Apache-2.0
+Author: serde-rs
+
+serde_json (github.com/serde-rs/json)
+License: MIT OR Apache-2.0
+Author: serde-rs
+
+syn (github.com/dtolnay/syn)
+License: MIT OR Apache-2.0
+Author: dtolnay
+
+syn (github.com/dtolnay/syn)
+License: MIT OR Apache-2.0
+Author: dtolnay
+
+tzf-dist (github.com/ringsaturn/tzf-dist)
+License: MIT
+Copyright (c) 2026 Han Xiao
+
+tzf-dist (github.com/ringsaturn/tzf-dist) (data)
+License: ODbL-1.0
+
+tzf-rs (github.com/ringsaturn/tzf-rs)
+License: MIT
+Copyright (c) 2022 ringsaturn
+
+unicode-ident (github.com/dtolnay/unicode-ident)
+License: (MIT OR Apache-2.0) AND Unicode-3.0
+Author: dtolnay
+
+zmij (github.com/dtolnay/zmij)
+License: MIT
+Author: dtolnay
